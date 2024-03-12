@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="Art Projects" content="Art Projects">
+  <meta name="author" content="Natasha Kanning">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+  <title>contact</title>
+  <link rel="stylesheet" href="./css/fonts.css" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="denver2023.html">Denver 2023</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">School</a>
+      <div class="dropdown-content">
+        <a href="3Dannimation.html">3D Animation</a>
+        <a href="drawing.html">Drawing</a>
+        <a href="photoshop.html">Photoshop</a>
+        <a href="photography.html">Photography</a>
+        <a href="filmediting.html">Film Editing</a>
+        <a href="math.html">Math</a>
+      </div>
+    </li>
+  </ul>
+
+  <style>
+    body {
+      background-image: url('images/sunflower1.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    p {
+     color: black;
+   }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: white; /* Set the background color to white */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: calc(100% - 16px);
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input.error, select.error {
+      border: 2px solid red;
+    }
+
+    #name-error, #email-error, #terms-error {
+      color: red;
+      margin-top: -16px;
+      margin-bottom: 16px;
+    }
+
+    button {
+      width: calc(100% - 16px);
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+    }
+    body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: black;
+  }
+
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+     background-color: #4caf50;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: green;
+  }
+  </style>
+</head>
+<body>
+
+  <h1>Contact Information</h1>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <td>Natasha Kanning</td>
+      </tr>
+      <tr>
+        <th>Preferred Name</th>
+        <td>Ash Kanning</td>
+      </tr>
+      <tr>
+        <th>Pronouns</th>
+        <td>She/They</td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td><a href="mailto:ashkanning@gmail.com">ashkanning@gmail.com</a></td>
+      </tr>
+      <tr>
+        <th>School Email</th>
+        <td><a href="mailto:natasha.kanning@umconnect.umt.edu">natasha.kanning@umconnect.umt.edu</a></td>
+      </tr>
+    </table>
+
+    <div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21824.586494146435!2d-114.01689057666168!3d46.86192966062233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x535dcc33f19815cb%3A0x9c296b8546ca9abf!2sUniversity%20of%20Montana!5e0!3m2!1sen!2sus!4v1710282117573!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+  <form id="contactForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <div id="name-error"></div>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <div id="email-error"></div>
+
+    <label for="terms">Accept Terms of Agreement (Yes/No):</label>
+    <p>By accepting these terms, you hereby declare your unyielding admiration
+      for the absolute awesomeness of sunflowers. Prepare to embark on an epic
+      journey of botanical brilliance, where the golden petals shall enchant
+      your senses, and the majestic sunflower heads will reign as floral
+      sovereigns in your heart. With this acceptance, you pledge allegiance
+      to the joyous sway of sunflowers in the gentle breeze and commit to spreading
+      happiness like pollen in the sunflower fields of life. May your days be as
+      bright as a sunflower's face, and may you forever bask in the radiance of
+      these magnificent floral wonders. Welcome to the Sunflower Fan Club –
+      where every petal tells a tale of sheer delight! 🌻✨</p>
+    <select id="terms" name="terms" required>
+      <option value="" disabled selected>Select an option</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <div id="terms-error"></div>
+
+    <button type="button" onclick="validateForm()">Submit</button>
+
+    <!-- Silly Paragraph about Sunflowers -->
+
+  </form>
+
+  <script>
+    function validateForm() {
+      var nameInput = document.getElementById('name');
+      var emailInput = document.getElementById('email');
+      var termsInput = document.getElementById('terms');
+      var nameError = document.getElementById('name-error');
+      var emailError = document.getElementById('email-error');
+      var termsError = document.getElementById('terms-error');
+
+      if (nameInput.value.trim() === '') {
+        nameInput.classList.add('error');
+        nameError.innerHTML = 'Please enter your name.';
+        nameInput.focus();
+      } else {
+        nameInput.classList.remove('error');
+        nameError.innerHTML = '';
+      }
+
+      if (emailInput.value.trim() === '') {
+        emailInput.classList.add('error');
+        emailError.innerHTML = 'Please enter your email.';
+        if (!nameInput.classList.contains('error')) {
+          emailInput.focus();
+        }
+      } else {
+        emailInput.classList.remove('error');
+        emailError.innerHTML = '';
+      }
+
+      if (termsInput.value.trim() === '') {
+        termsInput.classList.add('error');
+        termsError.innerHTML = 'Please answer the terms of agreement question.';
+        if (!nameInput.classList.contains('error') && !emailInput.classList.contains('error')) {
+          termsInput.focus();
+        }
+      } else {
+        termsInput.classList.remove('error');
+        termsError.innerHTML = '';
+      }
+    }
+  </script>
+
+  <div>
+    <a href="#" style="font-size: 24px; font-weight: bold;">Back to Top</a>
+
+</div>
+
+</body>
+</html>

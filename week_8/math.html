@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <meta name="Art Projects" content="Art Projects">
+      <meta name="author" content="Natasha Kanning">
+       <meta name="viewpoint" content="width=device-
+       width, initial-scale=1.0">
+    <title>Math</title>
+    <link rel="stylesheet" href="./css/fonts.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+  </head>
+  <body>
+
+    <header>
+      <ul>
+    <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    <li><a href="denver2023.html">Denver 2023</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">School</a>
+      <div class="dropdown-content">
+        <a href="3Dannimation.html">3D Animation</a>
+        <a href="drawing.html">Drawing</a>
+        <a href="photoshop.html">Photoshop</a>
+        <a href="photography.html">Photography</a>
+        <a href="filmediting.html">Film Editing</a>
+        <a href="math.html">Math</a>
+
+      </div>
+    </li>
+  </ul>
+
+
+        </header>
+        <style>
+        body {
+      background-image: url('images/math1.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+        </style>
+<body>
+  <h1>Random Addition Questions</h1>
+
+  <div id="question"></div>
+  <input type="text" id="answer" placeholder="Your Answer">
+  <button onclick="checkAnswer()">Check Answer</button>
+
+  <div id="results">
+    <p>Correct: <span id="correctCount">0</span></p>
+    <p>Incorrect: <span id="incorrectCount">0</span></p>
+    <p>Percentage: <span id="percentage">0%</span></p>
+  </div>
+
+  <script>
+    var correctCount = 0;
+    var incorrectCount = 0;
+
+    function generateQuestion() {
+      var num1 = Math.floor(Math.random() * 10) + 1;
+      var num2 = Math.floor(Math.random() * 10) + 1;
+      var questionText = num1 + ' + ' + num2;
+
+      return {
+        question: questionText,
+        answer: num1 + num2
+      };
+    }
+
+    function displayQuestion() {
+      var questionDiv = document.getElementById('question');
+      var questionObject = generateQuestion();
+      questionDiv.textContent = 'Question: ' + questionObject.question;
+
+
+      questionDiv.setAttribute('data-answer', questionObject.answer);
+    }
+
+    function updateResults() {
+      document.getElementById('correctCount').textContent = correctCount;
+      document.getElementById('incorrectCount').textContent = incorrectCount;
+
+      var totalQuestions = correctCount + incorrectCount;
+      var percentage = totalQuestions === 0 ? 0 : (correctCount / totalQuestions) * 100;
+      document.getElementById('percentage').textContent = percentage.toFixed(2) + '%';
+    }
+
+    function checkAnswer() {
+      var answerInput = document.getElementById('answer');
+      var userAnswer = parseFloat(answerInput.value);
+      var questionDiv = document.getElementById('question');
+      var correctAnswer = parseFloat(questionDiv.getAttribute('data-answer'));
+
+      if (isNaN(userAnswer)) {
+        alert('Please enter a valid number.');
+        return;
+      }
+
+      if (userAnswer === correctAnswer) {
+        correctCount++;
+      } else {
+        incorrectCount++;
+      }
+
+
+      displayQuestion();
+
+
+      updateResults();
+    }
+
+
+    displayQuestion();
+  </script>
+  <div>
+    <a href="#" style="font-size: 24px; font-weight: bold;">Back to Top</a>
+
+</div>
+</body>
+</html>
