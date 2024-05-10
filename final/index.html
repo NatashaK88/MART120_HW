@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADHD and Bipolar Disorder</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center; /* Center the enlarged images horizontally */
+      align-items: flex-start; /* Align the enlarged images to the top of the page */
+      height: 100vh; /* Ensure the container takes up the full viewport height */
+      background-color: #a0cef6; /* Light blue background color */
+    }
+    
+    #title {
+      text-align: center;
+      margin-top: 20px; 
+      font-size: 24px; 
+      font-weight: bold;
+    }
+
+    #container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      padding: 10px;
+      position: relative;
+    }
+
+    .circle {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      cursor: pointer;
+      overflow: hidden; /* Ensure the back image doesn't overflow the circle */
+      border-radius: 50%;
+      transition: transform 0.5s ease; 
+    }
+
+    .circle:hover {
+      transform: rotateY(180deg); /* Spin the circle on hover */
+    }
+
+    .circle .circle-content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .circle img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.5s ease; 
+    }
+
+    .circle .front {
+      opacity: 1; 
+    }
+
+    .circle .back {
+      opacity: 0; 
+    }
+
+    .circle.enlarged {
+      width: 600px;
+      height: 600px;
+      position: absolute; 
+      top: 0;
+    }
+
+    .circle.enlarged .back {
+      opacity: 1; 
+    }
+
+    .circle.enlarged .front {
+      opacity: 0; 
+    }
+
+    .circle.enlarged {
+  width: 600px;
+  height: 600px;
+  position: absolute; 
+  top: 0;
+  z-index: 999; /* Ensure the enlarged image is on top */
+}
+
+  </style>
+</head>
+<body>
+   
+
+    <div id="title">ADHD and <br />
+        Bipolar Disorder <br>
+        Information</div>
+
+
+  <div id="container">
+    <!-- Circles -->
+    <div class="circle" onclick="toggleEnlarged(this)">
+      <div class="circle-content">
+        <img class="front" src="about/about_front.jpg" alt="About Front">
+        <img class="back" src="about/about_back1.jpg" alt="About Back">
+      </div>
+    </div>
+    
+    <div class="circle" onclick="toggleEnlarged(this)">
+      <div class="circle-content">
+        <img class="front" src="anxiety/anxiety_front.jpg" alt="Anxiety Front">
+        <img class="back" src="anxiety/anxiety_back1.jpg" alt="Anxiety Back">
+      </div>
+    </div>
+    <div class="circle" onclick="toggleEnlarged(this)">
+      <div class="circle-content">
+        <img class="front" src="depression/depression_front.jpg" alt="Depression Front">
+        <img class="back" src="depression/depression_back1.jpg" alt="Depression Back">
+      </div>
+    </div>
+ 
+    <div class="circle" onclick="toggleEnlarged(this)">
+      <div class="circle-content">
+        <img class="front" src="doctor/doctor_front.jpg" alt="Doctor Front">
+        <img class="back" src="doctor/doctor_back1.jpg" alt="Doctor Back">
+      </div>
+    </div>
+   
+    <div class="circle" onclick="toggleEnlarged(this)">
+      <div class="circle-content">
+        <img class="front" src="function/function_front.jpg" alt="Function Front">
+        <img class="back" src="function/function_back1.jpg" alt="Function Back">
+      </div>
+    </div>
+   
+    <div class="circle" onclick="toggleEnlarged(this)">
+      <div class="circle-content">
+        <img class="front" src="group/group_front.jpg" alt="Group Front">
+        <img class="back" src="group/group_back1.jpg" alt="Group Back">
+      </div>
+    </div>
+ 
+    <div class="circle" onclick="toggleEnlarged(this)">
+      <div class="circle-content">
+        <img class="front" src="journaling/journaling_front.jpg" alt="Journaling Front">
+        <img class="back" src="journaling/journaling_back1.jpg" alt="Journaling Back">
+      </div>
+    </div>
+   
+    <div class="circle" onclick="toggleEnlarged(this)">
+      <div class="circle-content">
+        <img class="front" src="late/late_front.jpg" alt="Late Front">
+        <img class="back" src="late/late_back1.jpg" alt="Late Back">
+      </div>
+    </div>
+   
+    <div class="circle" onclick="toggleEnlarged(this)">
+      <div class="circle-content">
+        <img class="front" src="mania/manic_front.jpg" alt="Mania Front">
+        <img class="back" src="mania/manic_back1.jpg" alt="Mania Back">
+      </div>
+    </div>
+   
+    <div class="circle" onclick="toggleEnlarged(this)">
+      <div class="circle-content">
+        <img class="front" src="meditation/medittion_front.jpg" alt="Meditation Front">
+        <img class="back" src="meditation/meditation_back1.jpg" alt="Meditation Back">
+      </div>
+    </div>
+   
+    <div class="circle" onclick="toggleEnlarged(this)">
+      <div class="circle-content">
+        <img class="front" src="meds/meds_front.jpg" alt="Meds Front">
+        <img class="back" src="meds/meds_back1.jpg" alt="Meds Back">
+      </div>
+    </div>
+    
+    <div class="circle" onclick="toggleEnlarged(this)">
+      <div class="circle-content">
+        <img class="front" src="sensory/sensoryoverload front.jpg" alt="Sensory Front">
+        <img class="back" src="sensory/sensoryoverload_back1.jpg" alt="Sensory Back">
+      </div>
+    </div>
+    
+    <div class="circle" onclick="toggleEnlarged(this)">
+      <div class="circle-content">
+        <img class="front" src="sleep/sleep_front.jpg" alt="Sleep Front">
+        <img class="back" src="sleep/sleep_back1.jpg" alt="Sleep Back">
+      </div>
+    </div>
+   
+    <div class="circle" onclick="toggleEnlarged(this)">
+      <div class="circle-content">
+        <img class="front" src="support/support_front.jpg" alt="Support Front">
+        <img class="back" src="support/support_back1.jpg" alt="Support Back">
+      </div>
+    </div>
+    
+    <div class="circle" onclick="toggleEnlarged(this)">
+      <div class="circle-content">
+        <img class="front" src="trama/trama.jpg" alt="Trama Front">
+        <img class="back" src="trama/trama_back1.jpg" alt="Trama Back">
+      </div>
+    </div>
+   
+    <div class="circle" onclick="toggleEnlarged(this)">
+      <div class="circle-content">
+        <img class="front" src="walking/walking_front.jpg" alt="Walking Front">
+        <img class="back" src="walking/walking_back1.jpg" alt="Walking Back">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 5.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/five/2.3.1/five.min.js"></script>
+  <script>
+    function toggleEnlarged(element) {
+      element.classList.toggle('enlarged');
+    }
+  </script>
+  <br />
+  <br />
+  <div><p>Hover and click to learn more, <br />
+    move curser to read, <br />
+    click again to close.</p></div>
+  <br /><br />
+</body>
+</html>
